@@ -1,0 +1,56 @@
+{
+  "name": "mnemebrain",
+  "version": "0.1.0-alpha.1",
+  "description": "TypeScript SDK for MnemeBrain — Give your AI a real brain. Agents today store text. Mnemebrain stores beliefs — with evidence, confidence, provenance, and revision logic.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run tests/models.test.ts tests/client.test.ts tests/v4-clients.test.ts",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run tests/models.test.ts tests/client.test.ts tests/v4-clients.test.ts --coverage",
+    "test:integration": "MNEMEBRAIN_INTEGRATION=1 vitest run tests/integration/",
+    "test:e2e": "MNEMEBRAIN_E2E=1 vitest run tests/e2e/",
+    "lint": "eslint src/ tests/",
+    "prepare": "husky",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "mnemebrain",
+    "belief",
+    "memory",
+    "llm",
+    "agent",
+    "sdk"
+  ],
+  "author": "mnemebrain <hello@mnemebrain.ai>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnemebrain/mnemebrain-ts.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "husky": "^9.0.0",
+    "msw": "^2.7.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

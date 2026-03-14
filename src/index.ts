@@ -1,0 +1,67 @@
+/**
+ * MnemeBrain TypeScript SDK -- biological belief memory for LLM agents.
+ */
+
+export {
+  TruthState,
+  BeliefType,
+  Polarity,
+  EvidenceInput,
+  SandboxStatus,
+  CommitMode,
+  AttackType,
+  GoalStatus,
+  PolicyStatus,
+} from "./models.js";
+
+export type {
+  EvidenceInputOptions,
+  BeliefResult,
+  EvidenceDetail,
+  ExplanationResult,
+  SearchResult,
+  SearchResponse,
+  BeliefListItem,
+  BeliefListResponse,
+  BeliefSnapshot,
+  FrameOpenResult,
+  FrameContextResult,
+  FrameCommitResult,
+  RetrievedBelief,
+  AskResult,
+  SandboxResult,
+  SandboxContextResult,
+  BeliefChangeDetail,
+  SandboxDiffResult,
+  SandboxCommitResult,
+  SandboxExplainResult,
+  RevisionPolicyResult,
+  RevisionAuditEntry,
+  RevisionEvidenceItemOptions,
+  RevisionResult,
+  AttackEdgeResult,
+  ReconsolidationQueueResult,
+  ReconsolidationRunResult,
+  GoalResult,
+  GoalEvaluationResult,
+  PolicyStepResult,
+  PolicyResult,
+  ConsolidateResult,
+  MemoryTierResult,
+  MultihopResultItem,
+  MultihopResponse,
+  BenchmarkSandboxResult,
+  BenchmarkAttackResult,
+} from "./models.js";
+
+export {
+  MnemeBrainClient,
+  MnemeBrainError,
+  Brain,
+  SandboxSubClient,
+  RevisionSubClient,
+  AttackSubClient,
+  ReconsolidationSubClient,
+  GoalSubClient,
+  PolicySubClient,
+} from "./client.js";
